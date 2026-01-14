@@ -1,3 +1,14 @@
+Since you are applying for **PhD positions at TUM**, your README needs to look more like a **research project** and less like a simple tutorial. Professors want to see:
+
+1. **The Scientific Problem** (Why is this hard?)
+2. **The Engineering Excellence** (MLOps, CI/CD, and robust pipelines).
+3. **Clear Documentation** (How can a researcher reproduce your results?).
+
+Here is a professionally rewritten version of your README. Copy and paste this into your `README.md` file:
+
+---
+
+```markdown
 # Phishing Perception: End-to-End MLOps Pipeline for Network Security
 
 [![MLOps](https://img.shields.io/badge/MLOps-MLflow-blue)](https://mlflow.org/)
@@ -47,3 +58,63 @@ In network security, data distributions shift rapidly as attackers evolve. This 
 ├── templates/            # Web UI for file upload
 ├── Dockerfile            # Containerization instructions
 └── main.py               # FastAPI entry point
+
+```
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1. Environment Variables
+
+Create a `.env` file in the root directory and add your credentials:
+
+```env
+MONGO_DB_URL="your_mongodb_atlas_url"
+AWS_ACCESS_KEY_ID="your_aws_key"
+AWS_SECRET_ACCESS_KEY="your_aws_secret"
+
+```
+
+### 2. Local Installation
+
+```bash
+# Clone the repository
+git clone [https://github.com/Gauti555/Your-Repo-Name.git](https://github.com/Gauti555/Your-Repo-Name.git)
+cd Your-Repo-Name
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start the API
+python main.py
+
+```
+
+---
+
+## 🐳 Docker Deployment (AWS EC2)
+
+To deploy the system on an Ubuntu-based EC2 instance:
+
+```bash
+# Update and install Docker
+curl -fsSL [https://get.docker.com](https://get.docker.com) -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER && newgrp docker
+
+# Run the container
+docker build -t network-security .
+docker run -p 8080:8080 network-security
+
+```
+
+---
+
+## 📊 API Endpoints
+
+* `GET /train`: Executes the full ML pipeline (Ingestion → Validation → Training).
+* `POST /predict`: Upload a CSV file of network samples to receive batch predictions.
+
+---
+
