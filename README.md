@@ -1,12 +1,3 @@
-Since you are applying for **PhD positions at TUM**, your README needs to look more like a **research project** and less like a simple tutorial. Professors want to see:
-
-1. **The Scientific Problem** (Why is this hard?)
-2. **The Engineering Excellence** (MLOps, CI/CD, and robust pipelines).
-3. **Clear Documentation** (How can a researcher reproduce your results?).
-
-Here is a professionally rewritten version of your README. Copy and paste this into your `README.md` file:
-
----
 
 ```markdown
 # Phishing Perception: End-to-End MLOps Pipeline for Network Security
